@@ -8,8 +8,8 @@ app = Flask(__name__)
 db = pymysql.connect(
     host="localhost",
     user="root",
-    password="root@123",
-    database="blood_donation"
+    password="enter the mysql password",
+    database="blood_donation" #select the database
 )
 cursor = db.cursor()
 
@@ -150,3 +150,4 @@ def donation_log():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
