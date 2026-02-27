@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Blood</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef0e0;
+            padding: 20px;
+        }
+        h2 {
+            color: #800000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #d95d5d;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #800000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Request Blood</h2>
+    <form method="post">
+        Name: <input type="text" name="requester_name" required><br />
+        Contact: <input type="text" name="requester_contact"><br />
+        Blood Group: <input type="text" name="blood_group_required" required><br />
+        Quantity (units): <input type="number" name="quantity_required" required><br />
+        <button type="submit">Submit Request</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donate Blood</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef0e0;
+            padding: 20px;
+        }
+        h2 {
+            color: #800000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #d95d5d;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #800000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Donate Blood</h2>
+    <form method="post">
+        Donor:
+        <select name="donor_id">
+            {% for donor in donors %}
+                <option value="{{ donor[0] }}">{{ donor[1] }} ({{ donor[2] }})</option>
+            {% endfor %}
+        </select><br />
+        Blood Group: <input type="text" name="blood_group" required><br />
+        Quantity (units): <input type="number" name="quantity" required><br />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

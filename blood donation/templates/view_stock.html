@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Stock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef0e0;
+            padding: 20px;
+        }
+        h2 {
+            color: #800000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 50%;
+            max-width: 400px;
+            margin: 0 auto 30px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px #ccc;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        th {
+            background-color: #d95d5d;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Blood Stock</h2>
+    <table>
+        <tr><th>Blood Group</th><th>Quantity</th></tr>
+        {% for s in stock %}
+        <tr><td>{{ s[0] }}</td><td>{{ s[1] }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

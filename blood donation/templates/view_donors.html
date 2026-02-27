@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Donors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef0e0;
+            padding: 20px;
+        }
+        h2 {
+            color: #800000;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px #ccc;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #d95d5d;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h2>All Donors</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Blood Group</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Last Donation</th>
+        </tr>
+        {% for d in donors %}
+        <tr>
+            <td>{{ d[0] }}</td>
+            <td>{{ d[1] }}</td>
+            <td>{{ d[2] }}</td>
+            <td>{{ d[3] }}</td>
+            <td>{{ d[4] }}</td>
+            <td>{{ d[5] }}</td>
+            <td>{{ d[6] }}</td>
+            <td>{{ d[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

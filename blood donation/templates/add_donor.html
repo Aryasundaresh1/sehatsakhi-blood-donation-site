@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Donor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef0e0;
+            padding: 20px;
+        }
+        h2 {
+            color: #800000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #d95d5d;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #800000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add New Donor</h2>
+    <form method="post">
+        Name: <input type="text" name="name" required><br />
+        Age: <input type="number" name="age" required><br />
+        Gender:
+        <select name="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select><br />
+        Blood Group: <input type="text" name="blood_group" required><br />
+        Contact: <input type="text" name="contact"><br />
+        Address: <textarea name="address"></textarea><br />
+        Last Donation Date: <input type="date" name="last_donation_date"><br />
+        <button type="submit">Add Donor</button>
+    </form>
+</body>
+</html>

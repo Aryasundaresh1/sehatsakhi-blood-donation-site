@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Hub | Give Life</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+    --primary-red: #d32f2f;
+    --dark-red: #b71c1c;
+    --light-bg: #f8f9fa;
+    --text-dark: #2d3436;
+    --text-gray: #636e72;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Header & Nav */
+header {
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.logo i { color: var(--primary-red); }
+.logo span { color: var(--primary-red); }
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover { color: var(--primary-red); }
+
+.nav-cta {
+    background: var(--primary-red);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                url('https://images.unsplash.com/photo-1536856789559-1cb4b46fe722?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.hero-content { max-width: 600px; }
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.highlight { color: var(--primary-red); }
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.secondary-button {
+    display: inline-block;
+    margin-left: 15px;
+    color: var(--text-dark);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Stats Section */
+.stats {
+    padding: 60px 0;
+    background: var(--light-bg);
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 15px;
+}
+
+/* Process Section */
+.process { padding: 100px 0; }
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.step {
+    text-align: center;
+    padding: 20px;
+}
+
+.step-num {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer {
+    background: #2d3436;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i> BloodDonor<span>Hub</span>
+            </div>
+            <nav>
+                <a href="/add_donor">Become a Donor</a>
+                <a href="/view_donors">Find Blood</a>
+                <a href="/donate_blood" class="nav-cta">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Your Donation Can <br><span class="highlight">Save a Life</span></h1>
+                    <p>Every donation can save up to three lives. Join our community of heroes and help us ensure no one has to wait for a transfusion.</p>
+                    <div class="hero-buttons">
+                        <a href="/donate_blood" class="cta-button">Register to Donate</a>
+                        <a href="#how-it-works" class="secondary-button">How it Works</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>12,500+</h3>
+                    <p>Active Donors</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>45,000+</h3>
+                    <p>Liters Donated</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>150+</h3>
+                    <p>Partner Hospitals</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="process">
+            <div class="container">
+                <h2 class="section-title">The Donation Process</h2>
+                <div class="grid">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <h4>Registration</h4>
+                        <p>Sign up and complete a brief health history questionnaire.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <h4>Screening</h4>
+                        <p>A quick check of your pulse, blood pressure, and hemoglobin.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <h4>Donation</h4>
+                        <p>The actual process takes only 8-10 minutes. Relax and save lives!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Blood Donor Hub. | github: </p>
+        </div>
+    </footer>
+</body>
+</html>
